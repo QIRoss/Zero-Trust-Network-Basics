@@ -1,0 +1,66 @@
+# Python related
+__pycache__/
+*.py[cod]
+*.so
+*.pyo
+*.pyd
+*.swp
+*.log
+
+# Docker related
+docker-compose.override.yml
+*.env
+*.pid
+*.log
+build/
+tmp/
+*.sock
+Dockerfile*
+
+# Certificate and Key Files
+*.key
+*.csr
+*.crt
+*.srl
+
+# SSL config files (Optional)
+san.cnf
+
+# System specific files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+.env/
+.venv/
+*.virtualenv
+
+# Pipenv
+Pipfile.lock
+
+# Logs and temporary files
+logs/
+*.log
+*.out
+*.tmp
+*.bak
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Test-related files
+htmlcov/
+.coverage
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# VS Code specific
+.vscode/
+*.code-workspace
+
+# IDE Specific
+.idea/

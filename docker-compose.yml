@@ -1,0 +1,32 @@
+services:
+  fastapi1:
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi1
+    container_name: fastapi1
+    ports:
+      - "8000:8000"
+    networks:
+      - fastapi_net
+    volumes:
+      - ./server1.crt:/app/server1.crt
+      - ./server1.key:/app/server1.key
+      - ./rootCA.crt:/app/rootCA.crt
+
+  fastapi2:
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi2
+    container_name: fastapi2
+    ports:
+      - "8001:8001"
+    networks:
+      - fastapi_net
+    volumes:
+      - ./server2.crt:/app/server2.crt
+      - ./server2.key:/app/server2.key
+      - ./rootCA.crt:/app/rootCA.crt
+
+networks:
+  fastapi_net:
+    driver: bridge
