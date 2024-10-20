@@ -1,4 +1,4 @@
-# Zero Trust Network
+# Zero Trust Network Basics
 
 Studies based in day 51-52 of 100 Days System Design for DevOps and Cloud Engineers.
 
