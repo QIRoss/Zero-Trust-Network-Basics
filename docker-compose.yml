@@ -1,8 +1,6 @@
 services:
   fastapi1:
-    build:
-      context: .
-      dockerfile: Dockerfile.fastapi1
+    image: qiross/zero-trust-network-fastapi1:latest
     container_name: fastapi1
     ports:
       - "8000:8000"
@@ -14,9 +12,7 @@ services:
       - ./rootCA.crt:/app/rootCA.crt
 
   fastapi2:
-    build:
-      context: .
-      dockerfile: Dockerfile.fastapi2
+    image: qiross/zero-trust-network-fastapi2:latest
     container_name: fastapi2
     ports:
       - "8001:8001"
