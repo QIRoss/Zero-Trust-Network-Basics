@@ -117,9 +117,9 @@ openssl req -new -key server2.key -out server2.csr -config san.cnf
 openssl x509 -req -in server2.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out server2.crt -days 500 -sha256 -extensions req_ext -extfile san.cnf
 ```
 
-* Build and Run the Services: After generating the certificates, use Docker Compose to build and run the FastAPI services.
+* After generating the certificates, use Docker Compose to run the FastAPI services:
 ```
-docker-compose up --build
+docker-compose up
 ```
 
 * Test Communication: Visit https://localhost:8000/call_container2 to test the communication between the FastAPI services. Both services communicate securely using mutual TLS authentication.
